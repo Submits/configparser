@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<head>
+<title>Config Parser</title>
+<script src="configParser.js"></script>
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400&display=swap');
+
+
+body{
+    font-family: 'Lato';
+    color: white;
+    background-color: #111112
+}
+
+
+   .container {
+	width: 100%;
+	max-width: 100%;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #252526
+}
+::-webkit-scrollbar-track {
+    background: #303031
+}
+
+.wrapper {
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.left {
+  flex: 0 0 20%;
+  background-color: #121213;
+  padding: 20px;
+}
+
+.right {
+  flex: 1;
+  background-color: #161617;
+  padding: 20px;
+}
+
+.item {
+	max-width: 600px;
+	flex-basis: 300px;
+	padding: 17px;
+	border-radius: 10px;
+	background-color: #232324;
+	word-break: break-all;
+	color: var(--white);
+	font-size: 18px;
+	position: relative;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    line-height: 1.5;
+
+}
+
+img{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.title{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.info{
+
+    background-color: #282829;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+.configInput{
+    resize: vertical;
+    height: 400px;
+    width: 100%;
+    background-color: #202021;
+    color: white;
+    font-family: monospace;
+    border: none;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.parseButton{
+font-family: 'Lato';
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 16px;
+border: none;
+border-radius: 2px;
+cursor: pointer;
+background-color: #232324;
+color: white;
+}
+.parseButton:hover{
+    background-color: #272728;
+}
+
+.keyboard{
+    background-color: #808080;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black;
+    font-family: 'Source Code Pro';
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+select{
+    width: 100%;
+}
+
+option{
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+<div class="wrapper">
+<div class="left">
+<label class="title">Enter Config</label>
+<textarea id="configText" class="configInput"></textarea><br><br>
+<input id="files" type="file"><br><br>
+<select id="displayOption">
+    <option value="all">Show All Modules</option>
+    <option value="onlyBound">Show Only Bound Modules</option>
+  </select><br><br>
+<button onclick="parseClicked()" class="parseButton">Parse Text</button>
+<button onclick="parseFileClicked()" class="parseButton">Parse File</button>
+</div>
+<div class="right">
+    <div id="configs" class="container">
+   
+    </div>
+</div>
+</div>
+<script>
+    
+</script>
+</body>
+
+    
+
+  
