@@ -1,4 +1,4 @@
-# ConfigConverter
+# ConfigParser
 Simple config parser.
 
 ## Usage
